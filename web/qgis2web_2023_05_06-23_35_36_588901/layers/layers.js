@@ -1,0 +1,43 @@
+var wms_layers = [];
+
+var format_EstimatedUnemploymentRate_0 = new ol.format.GeoJSON();
+var features_EstimatedUnemploymentRate_0 = format_EstimatedUnemploymentRate_0.readFeatures(json_EstimatedUnemploymentRate_0, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_EstimatedUnemploymentRate_0 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_EstimatedUnemploymentRate_0.addFeatures(features_EstimatedUnemploymentRate_0);
+var lyr_EstimatedUnemploymentRate_0 = new ol.layer.Vector({
+                declutter: true,
+                source:jsonSource_EstimatedUnemploymentRate_0, 
+                style: style_EstimatedUnemploymentRate_0,
+                interactive: false,
+    title: ' Estimated Unemployment Rate (%)
+<br />\
+    <img src="styles/legend/EstimatedUnemploymentRate_0_0.png" /> 0 - 0<br />\
+    <img src="styles/legend/EstimatedUnemploymentRate_0_1.png" /> 0 - 2.1<br />\
+    <img src="styles/legend/EstimatedUnemploymentRate_0_2.png" /> 2.1 - 10.1<br />\
+    <img src="styles/legend/EstimatedUnemploymentRate_0_3.png" /> 10.1 - 20<br />\
+    <img src="styles/legend/EstimatedUnemploymentRate_0_4.png" /> 20 - 74.5<br />'
+        });
+
+lyr_EstimatedUnemploymentRate_0.setVisible(true);
+var layersList = [lyr_EstimatedUnemploymentRate_0];
+lyr_EstimatedUnemploymentRate_0.set('fieldAliases', {'ID_0': 'ID_0', 'ISO': 'ISO', 'NAME_0': 'NAME_0', 'ID_1': 'ID_1', 'NAME_1': 'NAME_1', 'TYPE_1': 'TYPE_1', 'ENGTYPE_1': 'ENGTYPE_1', 'NL_NAME_1': 'NL_NAME_1', 'VARNAME_1': 'VARNAME_1', 'Date': 'Date', ' Estimated_Unemployment_Rate_(%)
+': ' Estimated_Unemployment_Rate_(%)
+', ' Estimated_Employed
+': ' Estimated_Employed
+', ' Estimated_Labour_Participation_Rate_(%)
+': ' Estimated_Labour_Participation_Rate_(%)
+', 'Area': 'Area', });
+lyr_EstimatedUnemploymentRate_0.set('fieldImages', {'ID_0': 'TextEdit', 'ISO': 'TextEdit', 'NAME_0': 'TextEdit', 'ID_1': 'TextEdit', 'NAME_1': 'TextEdit', 'TYPE_1': 'TextEdit', 'ENGTYPE_1': 'TextEdit', 'NL_NAME_1': 'TextEdit', 'VARNAME_1': 'TextEdit', 'Date': 'TextEdit', ' Estimated_Unemployment_Rate_(%)
+': 'TextEdit', ' Estimated_Employed
+': 'TextEdit', ' Estimated_Labour_Participation_Rate_(%)
+': 'TextEdit', 'Area': 'TextEdit', });
+lyr_EstimatedUnemploymentRate_0.set('fieldLabels', {'ID_0': 'no label', 'ISO': 'no label', 'NAME_0': 'no label', 'ID_1': 'no label', 'NAME_1': 'inline label', 'TYPE_1': 'no label', 'ENGTYPE_1': 'no label', 'NL_NAME_1': 'no label', 'VARNAME_1': 'no label', 'Date': 'inline label', ' Estimated_Unemployment_Rate_(%)
+': 'inline label', ' Estimated_Employed
+': 'inline label', ' Estimated_Labour_Participation_Rate_(%)
+': 'inline label', 'Area': 'inline label', });
+lyr_EstimatedUnemploymentRate_0.on('precompose', function(evt) {
+    evt.context.globalCompositeOperation = 'normal';
+});
